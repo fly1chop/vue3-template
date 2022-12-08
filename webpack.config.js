@@ -13,6 +13,7 @@ module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
     clean: true
   },
   module: {
@@ -44,5 +45,6 @@ module.exports = {
   ],
   devServer: {
     // port: 3000
+    historyApiFallback: true // when using HTML5 History API, index.html page will likely have to be served in place of any 404 responses.
   }
 }
